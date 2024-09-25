@@ -23,135 +23,121 @@
 		<div class="slides">
 			<section>
 				<h1>
-					Beautiful presentations
+					Кортежи и словари
 				</h1>
-				<h2>New features</h2>
-				<ul>
-					<li>Nerd icons </li>
-					<li><code class="js">(inline) => code("highlighting")</code></li>
-					<li>Automatic QR Code generation</li>
-					<li>and much more!</li>
-				</ul>
-			</section>
-			<section>
-				<h1>
-					Custom TokyoNight theme
-				</h1>
-				<h2 class="fragment">That has</h2>
-				<h3 class="fragment">Multi</h3>
-				<h4 class="fragment">Level</h4>
-				<h5 class="fragment">Heading</h5>
-				<h6 class="fragment">Coloring</h6>
-				<h6>Thanks to this project <a href="https://github.com/tcmmichaelb139/obsidian-tokyonight"></a> for the
-					colorscheme!</h6>
+				<img data-type="qrcode" class="r-stretch" alt="https://ktkv-presentations.github.io/algos-12/">
 			</section>
 			<section>
 				<section>
-					<h1>Tailwind CSS</h1>
-					<div class="grid grid-cols-2 gap-8">
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div>
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-						<div class="col-span-2">
-							<h5>Lorem, ipsum.</h5>
-							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quod fugiat harum modi laboriosam
-								dignissimos, maxime possimus? Error, nihil in.</p>
-						</div>
-					</div>
-				</section>
-				<section>
-					<h1>Custom classes</h1>
-					<div class="grid grid-cols-3 gap-8">
-						<div class="border-r">
-							<h5>border-r</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-o">
-							<h5>border-o</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-						<div class="border-y">
-							<h5>border-y</h5>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, soluta!</p>
-						</div>
-					</div>
-				</section>
-			</section>
-			<section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<div>
-						Now also has Tokyo Night <code>highlight.js</code> highlighting implementation
-					</div>
-					<pre><code data-trim data-noescape>
-var foo = {
-    bar: function () {
-             alert("Hello, World!");
-         }
-};	
+					<h1>Кортеж</h1>
+					<p>упорядоченная коллекция элементов, которая может содержать элементы различных типов</p>
+					<div class="border-y">кортежи могут использоваться для хранения данных, которые не должны изменяться</div>
+					<pre><code class="python">
+mixed_tuple = (1, 3.14, 'hello', True)
 					</code></pre>
 				</section>
-				<section data-auto-animate>
-					<h1>New code highlighting!</h1>
-					<h5>Inline code highlighting is now also supported!</h5>
-					<p>
-						Just wrap your code with <code>&lt;code&gt;</code> tag and get
-						highlighting like this <code class="js">const foo = () => {return bar}</code>!
-					</p>
+				<section>
+					<h1>Отличия от списка</h1>
+					<ul><li>Создаются с помощью ()</li><li>Иммутабельные (неизменяемые)</li></ul>
+					<pre><code class="python">
+a_tuple = (1, 2, 3)
+
+a_tuple[2] = 4
+# Returns: TypeError: 'tuple' object does not support item assignment
+					</code></pre>
+				</section>
+				<section>
+<h1>Методы кортежей</h1>
+<div class="grid grid-cols-2 gap-4">
+	<div class="border-b">
+		<code class="python">count(value)</code>
+		<p>возвращает количество вхождений значения в кортеже</p>
+		<pre><code class="python">
+my_tuple = (1, 2, 2, 3)
+print(my_tuple.count(2))  # Вывод: 2
+		</code></pre>
+	</div><div class="border-b">
+		<code class="python">index(value)</code>
+		<p>возвращает индекс первого вхождения значения в кортеже</p>
+		<pre><code class="python">
+my_tuple = (1, 2, 2, 3)
+print(my_tuple.index(2))  # Вывод: 2
+		</code></pre>
+	</div>
+</div>
 				</section>
 			</section>
 			<section>
-				<h1>Mermaid for beautiful diagrams!</h1>
-				<div class="mermaid">
-					<pre>
-						erDiagram
-    CUSTOMER ||--o{ ORDER : ""
-    CUSTOMER {
-        string name
-        string custNumber
-        string sector
-    }
-    ORDER ||--|{ LINE-ITEM : contains
-    ORDER {
-        int orderNumber
-        string deliveryAddress
-    }
-    LINE-ITEM {
-        string productCode
-        int quantity
-        float pricePerUnit
-    }
-    ORDER ||--|{ STUDENT : contains
-    STUDENT {
-        int orderNumber
-        string deliveryAddress
-    }
-						</pre>
-				</div>
-				<h4>Check documentation <a href="https://mermaid.js.org/config/usage.html">here</a>!</h4>
-			</section>
 			<section>
-				<h1>Now supports Nerd font icons!</h1>
-				<div>Nerdy project that adds icons to font itself</div>
-				<h6>Checkout their site for icons like this <a href="https://www.nerdfonts.com/">󰖟</a>!
-				</h6>
+				<h1>Набор (сет)</h1>
+				<p>неупорядоченная коллекция уникальных элементов</p>
+				<pre><code class="python">
+my_set = {1, 2, 3, 'a', 'b', 'c'}
+				</code></pre>
 			</section>
+<section></section>
+					<h1>Отличия от списка</h1>
+					<ul><li>Создаются с помощью {}</li><li>Элементы наборов не имеют фиксированного порядка</li><li>Не допускают дубликатов</li></ul>
+					<pre><code class="python">
+	my_set = {1, 2, 3, 'a', 'b', 'c'}
+					</code></pre>
+				</section>
+				<section>
+					<h1>Создание наборов</h1>
+					<h4>с использованием фигурных скобок</h4>
+					<pre><code class="python">
+my_set = {1, 2, 3, 'a', 'b', 'c'}
+					</code></pre>
+					<br>
+					<h4>с использованием функции set()</h4>
+					<pre><code class="python">
+another_set = set([1, 2, 3, 4])
+					</code></pre>
+				</section>
+				<section>
+					<h1>Методы наборот</h1>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-b">
+							<code class="python">
+								add(element)
+							</code>
+							<p>добавляет элемент в набор</p>
+							<pre><code class="python">
+my_set.add(4)
+							</code></pre>
+						</div><div class="border-b">
+							<code class="python">
+remove(element)
+							</code>
+							<p>удаляет элемент из набора; вызывает ошибку, если элемент отсутствует</p>
+							<pre><code class="python">
+my_set.remove(1)
+							</code></pre>
+						</div>
+					</div>
+				</section><section>
+					<h1>Методы наборот</h1>
+					<div class="grid grid-cols-2 gap-4">
+						<div class="border-b">
+							<code class="python">discard(element)</code>
+							<p>удаляет элемент из набора, но не вызывает ошибку, если элемент отсутствует</p>
+							<pre><code class="python">
+my_set.discard(5)
+							</code></pre>
+						</div><div class="border-b">
+							<code class="python">
+intersection(other_set)
+							</code>
+							<p>возвращает новый набор, содержащий только элементы, общие для обоих наборов</p>
+							<pre><code class="python">
+intersection_set = set1.intersection(set2)  # Вывод: {3}
+							</code></pre>
+						</div>
+					</div>
+				</section>
 			<section>
-				<h1>Now supports automatic QRCode generation!</h1>
-				<div>With GoQR you can just add data-type and alt attributes to your <code
-						class="html">&lt;img alt="https://goqr.me/" data-type="qrcode" / &gt;</code> tag!</div>
-				<img class="r-stretch" alt="https://goqr.me/" data-type="qrcode" />
-				</h6>
+
 			</section>
-			<section>
-				<h1>New changes on the way!</h1>
 			</section>
 		</div>
 	</div>
