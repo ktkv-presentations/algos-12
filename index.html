@@ -23,7 +23,7 @@
 		<div class="slides">
 			<section>
 				<h1>
-					Кортежи и словари
+					Кортежи и множества
 				</h1>
 				<img data-type="qrcode" class="r-stretch" alt="https://ktkv-presentations.github.io/algos-12/">
 			</section>
@@ -75,7 +75,7 @@ print(my_tuple.index(2))  # Вывод: 2
 my_set = {1, 2, 3, 'a', 'b', 'c'}
 				</code></pre>
 			</section>
-<section></section>
+<section>
 					<h1>Отличия от списка</h1>
 					<ul><li>Создаются с помощью {}</li><li>Элементы наборов не имеют фиксированного порядка</li><li>Не допускают дубликатов</li></ul>
 					<pre><code class="python">
@@ -87,6 +87,7 @@ my_set = {1, 2, 3, 'a', 'b', 'c'}
 					<h4>с использованием фигурных скобок</h4>
 					<pre><code class="python">
 my_set = {1, 2, 3, 'a', 'b', 'c'}
+my_set_single = {1,}
 					</code></pre>
 					<br>
 					<h4>с использованием функции set()</h4>
@@ -95,7 +96,7 @@ another_set = set([1, 2, 3, 4])
 					</code></pre>
 				</section>
 				<section>
-					<h1>Методы наборот</h1>
+					<h1>Методы наборов</h1>
 					<div class="grid grid-cols-2 gap-4">
 						<div class="border-b">
 							<code class="python">
@@ -116,7 +117,7 @@ my_set.remove(1)
 						</div>
 					</div>
 				</section><section>
-					<h1>Методы наборот</h1>
+					<h1>Методы наборов</h1>
 					<div class="grid grid-cols-2 gap-4">
 						<div class="border-b">
 							<code class="python">discard(element)</code>
